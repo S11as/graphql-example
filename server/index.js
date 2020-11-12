@@ -17,7 +17,13 @@ const root = {
   users: () => users,
   user: ({id})=>{
     return users.find(user=>user.id===id);
+  },
+  updateUser: ({id, user})=>{
+    const user1 = users.find(user=>user.id===id);
+    user1.name = user.name;
+    return user1;
   }
+
 }
 
 const app = express()
