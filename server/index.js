@@ -18,10 +18,15 @@ const root = {
   user: ({id})=>{
     return users.find(user=>user.id===id);
   },
-  updateUser: ({id, user})=>{
+  updateUser: ({id, name})=>{
     const user1 = users.find(user=>user.id===id);
-    user1.name = user.name;
+    user1.name = name;
+    console.log(user1);
     return user1;
+  },
+  simpleUpdate: ({data})=>{
+    console.log(data)
+    return {id:"12", info: data};
   }
 
 }

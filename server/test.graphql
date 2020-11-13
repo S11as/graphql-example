@@ -24,7 +24,7 @@ type Query{
 #    }
 # }
 type Mutation{
-    updateUser(id:String, user:UserInput):User
+    updateUser(id:String, name:UserInput):User
 }
 
 type User {
